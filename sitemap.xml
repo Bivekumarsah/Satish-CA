@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Replace the URL below with the final production domain after deployment. -->
-  <url>
-    <loc>https://example.com/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url><loc>https://bivekumarsah.github.io/Satish-CA/</loc><priority>1.0</priority></url>
+<url><loc>https://bivekumarsah.github.io/Satish-CA/about.html</loc></url>
+<url><loc>https://bivekumarsah.github.io/Satish-CA/services.html</loc></url>
+<url><loc>https://bivekumarsah.github.io/Satish-CA/industries.html</loc></url>
+<url><loc>https://bivekumarsah.github.io/Satish-CA/resources.html</loc></url>
+<url><loc>https://bivekumarsah.github.io/Satish-CA/faq.html</loc></url>
+<url><loc>https://bivekumarsah.github.io/Satish-CA/booking.html</loc></url>
+<url><loc>https://bivekumarsah.github.io/Satish-CA/contact.html</loc></url>
+<url><loc>https://bivekumarsah.github.io/Satish-CA/company-profile.html</loc></url>
+<url><loc>https://bivekumarsah.github.io/Satish-CA/privacy.html</loc></url>
 </urlset>
