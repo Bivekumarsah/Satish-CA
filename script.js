@@ -46,3 +46,39 @@ document.getElementById('copy-request')?.addEventListener('click',async(e)=>{
 document.querySelectorAll('a[href^="#"]').forEach(link=>{
   link.addEventListener('click',()=>{nav?.classList.remove('open');menuButton?.setAttribute('aria-expanded','false');});
 });
+
+const DEMO_WHATSAPP='9779800000000';
+const whatsappUrl=(message)=>'https://wa.me/'+DEMO_WHATSAPP+'?text='+encodeURIComponent(message);
+
+const bookingDate=document.getElementById('booking-date');
+if(bookingDate){
+  const now=new Date();
+  const local=new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().split('T')[0];
+  bookingDate.min=local;
+}
+
+document.getElementById('booking-form')?.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const d=new FormData(e.currentTarget);
+  const msg=[
+    'Hello Satish CA, I would like to request a consultation.',
+    '',
+    'Name: '+d.get('booking_name'),
+    'Phone/WhatsApp: '+d.get('booking_phone'),
+    'Service: '+d.get('booking_service'),
+    'Preferred date: '+d.get('booking_date'),
+    'Preferred time: '+d.get('booking_time'),
+    'Meeting mode: '+d.get('booking_mode'),
+    'Note: '+(d.get('booking_note')||'Not provided'),
+    '',
+    'Please confirm availability. (Demo website request)'
+  ].join('\n');
+  window.open(whatsappUrl(msg),'_blank','noopener');
+});
+
+form?.addEventListener('submit',()=>{
+  setTimeout(()=>{
+    const wa=document.getElementById('whatsapp-request');
+    if(wa && output?.value) wa.href=whatsappUrl(output.value+'\n\nSent from Satish CA demo website.');
+  },0);
+});
