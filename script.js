@@ -42,3 +42,7 @@ document.getElementById('copy-request')?.addEventListener('click',async(e)=>{
     e.currentTarget.textContent='Copied ✓';
   }
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+  link.addEventListener('click',()=>{nav?.classList.remove('open');menuButton?.setAttribute('aria-expanded','false');});
+});
